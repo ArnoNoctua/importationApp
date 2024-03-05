@@ -24,7 +24,7 @@ const ImportateurDetail = ({ updateImportateur, updateImage }) => {
             const { data } = await getImportateur(id);
             setImportateur(data);
             console.log(data);
-            //toast.success('Importateur trouvé');
+            //toastSuccess('Importateur trouvé');
         } catch (error) {
             console.log(error);
             toast.error(error.message);
@@ -66,13 +66,13 @@ const ImportateurDetail = ({ updateImportateur, updateImage }) => {
 
     return (
         <>
-            <Link to={'/Importateurs'} className='link'><i className='bi bi-arrow-left'></i> Back to list</Link>
+            <Link to={'/Importateurs'} className='link'><i className='bi bi-arrow-left'></i> Revenir à la liste</Link>
             <div className='profile'>
                 <div className='profile__details'>
                     <img src={importateur.photoURL} alt={`Photo de profile de${importateur.name}`} />
                     <div className='profile__metadata'>
                         <p className='profile__name'>{importateur.name}</p>
-                        <p className='profile__muted'>JPG, GIF, or PNG. Max size of 10MG</p>
+                        <p className='profile__muted'>JPG, GIF, ou PNG. Taille max de 10MG</p>
                         <button onClick={selectImage} className='btn'><i className='bi bi-cloud-upload'></i> Change Photo</button>
                     </div>
                 </div>
@@ -82,7 +82,7 @@ const ImportateurDetail = ({ updateImportateur, updateImage }) => {
                             <div className="user-details">
                                 <input type="hidden" defaultValue={importateur.id} name="id" required />
                                 <div className="input-box">
-                                    <span className="details">Name</span>
+                                    <span className="details">Nom</span>
                                     <input type="text" value={importateur.name} onChange={onChange} name="name" required />
                                 </div>
                                 <div className="input-box">
@@ -90,15 +90,15 @@ const ImportateurDetail = ({ updateImportateur, updateImage }) => {
                                     <input type="text" value={importateur.email} onChange={onChange} name="email" required />
                                 </div>
                                 <div className="input-box">
-                                    <span className="details">Phone</span>
+                                    <span className="details">Téléphone</span>
                                     <input type="text" value={importateur.phone} onChange={onChange} name="phone" required />
                                 </div>
                                 <div className="input-box">
-                                    <span className="details">Address</span>
+                                    <span className="details">Adresse</span>
                                     <input type="text" value={importateur.address} onChange={onChange} name="address" required />
                                 </div>
                                 <div className="input-box">
-                                    <span className="details">Title</span>
+                                    <span className="details">Titre</span>
                                     <input type="text" value={importateur.title} onChange={onChange} name="title" required />
                                 </div>
                                 <div className="input-box">
@@ -107,7 +107,7 @@ const ImportateurDetail = ({ updateImportateur, updateImage }) => {
                                 </div>
                             </div>
                             <div className="form_footer">
-                                <button type="submit" className="btn">Save</button>
+                                <button type="submit" className="btn">Sauvegarder</button>
                             </div>
                         </form>
                     </div>
