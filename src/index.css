@@ -207,7 +207,7 @@ i {
 	gap: 1rem;
 	margin-top: 3rem;
 }
-
+  
 .btn {
 	color: var(--white);
 	background-color: var(--selective-blue);
@@ -365,6 +365,15 @@ i {
 .pagination a:hover:not(.active) {
 	background-color: #ecf1f1;
 }
+
+/* Login */
+.login-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh; /* Make the container fill the entire viewport height */
+  }
 
 /* PROFILE */
 

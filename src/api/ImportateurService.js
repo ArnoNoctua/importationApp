@@ -1,6 +1,15 @@
 import axios from "axios";
 
 const API_URL = 'http://localhost:8080/importateurs';
+const API_URL_AUTH = 'http://localhost:8080';
+
+export async function login(credentials) {
+    return await axios.post(`${API_URL_AUTH}/login`, credentials);
+}
+
+export async function register(userInfo) {
+    return await axios.post(`${API_URL_AUTH}/register`, userInfo);
+}
 
 export async function saveImportateur(importateur) {
     return await axios.post(API_URL, importateur);
