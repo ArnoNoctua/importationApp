@@ -10,6 +10,10 @@ jest.mock('../api/ImportateurService', () => ({
 }));
 
 describe('Login component', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
   test('should call login function with correct credentials', async () => {
     // Arrange
     const onLoginMock = jest.fn();

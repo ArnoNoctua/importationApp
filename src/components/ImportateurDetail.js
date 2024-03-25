@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { getImportateur } from '../api/ImportateurService';
 import { toast } from 'react-toastify';
+import CSVUploader from './CSVuploader';
 
 
 const ImportateurDetail = ({ updateImportateur, updateImage }) => {
@@ -112,6 +113,7 @@ const ImportateurDetail = ({ updateImportateur, updateImage }) => {
                         </form>
                     </div>
                 </div>
+                <CSVUploader />
             </div>
 
             <form style={{ display: 'none' }}>
